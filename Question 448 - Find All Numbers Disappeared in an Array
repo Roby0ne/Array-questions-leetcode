@@ -1,0 +1,13 @@
+public class Solution {
+    public IList<int> FindDisappearedNumbers(int[] nums) {
+        List<int> ans = new List<int>();
+        
+        if(nums.Length > 0){
+            ans.AddRange(Enumerable
+            .Range(1, nums.Length > nums.Max() ? nums.Length : nums.Max())
+            .Except(nums));
+        }
+        
+        return ans;
+    }
+}

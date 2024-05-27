@@ -1,0 +1,18 @@
+public class Solution {
+    public int GetLastMoment(int n, int[] left, int[] right) {
+        int time = 0;
+
+        foreach (int pos in left) {
+
+            time = Math.Max(time, pos);
+        }
+
+        foreach (int pos in right) {
+
+            time = Math.Max(time, n - pos);
+        }
+
+        return time;
+    }
+
+}
